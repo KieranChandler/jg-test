@@ -1,0 +1,34 @@
+swagger: '2.0'
+info:
+  title: Gift Aid Service
+  version: 1.0.0
+basePath: /api
+schemes:
+  - https
+paths:
+  /giftaid:
+    get:
+      summary: Get the amount of gift aid reclaimable for donation amount
+      parameters:
+        - in: query
+          name: amount
+          type: number
+          required: true
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/GiftAidResponse'
+definitions:
+  GiftAidResponse:
+    type: object
+    required:
+      - donationAmount
+      - giftAidAmount
+    properties:
+      donationAmount:
+        type: number
+      giftAidAmount: 
+        type: number
