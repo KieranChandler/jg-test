@@ -1,4 +1,4 @@
-# JustGiving FinTech Test
+# JustGiving Test
 
 A big part of what we do at JustGiving is reclaim the Gift Aid on donations made to charities. This saves them a lot of time and processing overheads.
 
