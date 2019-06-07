@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace JG.FinTechTest.Controllers
+namespace JG.FinTechTest.GiftAid
 {
     [Route("api/giftaid")]
     [ApiController]
