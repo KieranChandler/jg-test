@@ -14,12 +14,12 @@ namespace JG.FinTechTest.GiftAid
         }
 
         [HttpGet]
-        public IActionResult Get([FromQuery] decimal amount)
+        public IActionResult Get([FromQuery] GetGiftAidApiRequest request)
         {
             return Ok(
                 _getGiftAidQuery.Query(new GetGiftAidQueryRequest
                 {
-                    PrincipalAmount = amount
+                    PrincipalAmount = request.Amount
                 }));
         }
     }
