@@ -6,7 +6,7 @@ namespace JG.FinTechTest.GiftAid.Donations
     {
         public string Name { get; private set; }
 
-        public string PostCode { get; private set; }
+        public PostCode PostCode { get; private set; }
 
         public decimal DonationAmount { get; private set; }
 
@@ -22,7 +22,7 @@ namespace JG.FinTechTest.GiftAid.Donations
                 throw new ArgumentException($"{nameof(donationAmount)} must be in the range of 2.00 and 100,000.00", nameof(donationAmount));
 
             Name = name;
-            PostCode = postCode;
+            PostCode = new PostCode(postCode);
             DonationAmount = donationAmount;
         }
     }
