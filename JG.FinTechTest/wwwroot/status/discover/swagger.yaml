@@ -14,6 +14,8 @@ paths:
           name: amount
           type: number
           required: true
+          description: |
+            A decimal value with a minimum of 2.00 (£2.00) and maximum of 100000.00 (£100,000.00)
       produces:
         - application/json
       responses:
