@@ -23,6 +23,21 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/GiftAidResponse'
+  /giftaid/donation:
+    post:
+      summary: Add a new donation
+      parameters:
+        - in: body
+          name: 'NewDonationRequest'
+          schema:
+            $ref: '#/definitions/NewDonationRequest'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/NewDonationResponse'
 definitions:
   GiftAidResponse:
     type: object
@@ -34,3 +49,23 @@ definitions:
         type: number
       giftAidAmount: 
         type: number
+  NewDonationRequest:
+    type: object
+    required:
+      - name
+      - postCode
+      - donationAmount
+    properties:
+      name:
+        type: string
+      postCode:
+        type: string
+      donationAmount: 
+        type: number
+  NewDonationResponse:
+    type: object
+    required:
+      - donationId
+    properties:
+      donationId:
+        type: string
